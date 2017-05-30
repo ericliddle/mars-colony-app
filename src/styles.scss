@@ -1,0 +1,115 @@
+/* You can add global styles to this file, and also import other style files */
+
+body, html {
+    width: 100vw;
+    height: 100vh;
+    margin: 0px 0px;
+}
+
+body {
+    background: -webkit-linear-gradient(rgba(0,0,0,0.5), rgba(86,46,46,0.5));
+    background: -moz-linear-gradient(rgba(0,0,0,0.5), rgba(86,46,46,0.5));
+    background: -o-linear-gradient(rgba(0,0,0,0.5), rgba(86,46,46,0.5));
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(86,46,46,0.5)),
+                url("https://www.jpl.nasa.gov/spaceimages/images/mediumsize/PIA17447_ip.jpg") no-repeat center;
+    background-size: cover; 
+}
+
+.container {
+    height: 100%;
+    width: 100%;
+}
+
+.whole-page {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    justify-content: center;
+    color: white;
+    font-family: Helvetica, sans-serif;
+    font-weight: lighter;
+}
+
+.circle {
+    height: 75px;
+    width: 75px;
+}
+
+#circle2 {
+  margin-top: 20px;
+  margin-left: 30px;
+  position: relative;
+  background: #45453f;
+}
+
+.pulse {
+  width: 10px;
+  height: 10px;
+  border: 5px solid #f7f14c;
+  border-radius: 30px;
+  background-color: #716f42;
+  z-index: 10;
+  position: absolute;
+}
+
+.dot {
+  border: 10px solid #fff601;
+  background: transparent;
+  border-radius: 60px;
+  height: 50px;
+  width: 50px;
+  animation: pulse 3s ease-out;
+  animation-iteration-count: infinite;
+  position: absolute;
+  top: -25px;
+  left: -25px;
+  z-index: 1;
+  opacity: 0;
+}
+
+@-moz-keyframes pulse {
+ 0% {
+    -moz-transform: scale(0);
+    opacity: 0.0;
+ }
+ 25% {
+    -moz-transform: scale(0);
+    opacity: 0.1;
+ }
+ 50% {
+    -moz-transform: scale(0.1);
+    opacity: 0.3;
+ }
+ 75% {
+    -moz-transform: scale(0.5);
+    opacity: 0.5;
+ }
+ 100% {
+    -moz-transform: scale(1);
+    opacity: 0.0;
+ }
+}
+
+@-webkit-keyframes pulse {
+ 0% {
+    -webkit-transform: scale(0);
+    opacity: 0.0;
+ }
+ 25% {
+    -webkit-transform: scale(0);
+    opacity: 0.1;
+ }
+ 50% {
+    -webkit-transform: scale(0.1);
+    opacity: 0.3;
+ }
+ 75% {
+    -webkit-transform: scale(0.5);
+    opacity: 0.5;
+ }
+ 100% {
+    -webkit-transform: scale(1);
+    opacity: 0.0;
+ }
+}

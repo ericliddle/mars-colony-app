@@ -1,6 +1,17 @@
 <div class= "page">
     <h1>Tell Us Who You Are</h1>
-    <form>
+
+      <form class="register-form">
+    <fieldset>
+      <input type="text" placeholder="Enter your name" />
+      <input type="number" placeholder="Enter your age" />
+      <select>
+        <option value="1">Select an occupation</option>
+      </select>
+    </fieldset>
+    <button type="submit">Register</button>
+  </form>
+    <!--<form>
     <fieldset>
       <input name="name" type="text" placeholder="Enter Your Name" required/>
       <input type="text" placeholder="Enter Your Earth Age" />
@@ -11,6 +22,6 @@
       <label>Action</label>
     </fieldset>
     <button routerLink="/encounters" (click)="postColonist()" type="submit"> Register</button>
-  </form>
+  </form>-->
   <h1> Check in </h1>
 </div>

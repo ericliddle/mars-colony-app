@@ -1,3 +1,17 @@
-<p>
-  report works!
-</p>
+  <div>
+    <h1>Recent Encounters</h1>
+    <span>Safety on Mars is Your Responsibility</span>
+  <div>
+    <select>
+          <option>Select Occupation</option>
+          <option *ngFor="let alien of this.aliens">{{alien.type}}</option>
+    </select>
+  </div>    
+  <div>
+    <textarea placeholder="Action taken" ng-model="encounter.action" name="Action_taken" id="" rows="10" required="" class="ng-pristine ng-empty ng-invalid ng-invalid-required ng-touched"></textarea>
+  </div>
+  </div>
+
+  <form>
+    <button routerLink="/encounters" (click)="extractData()" type="report">Submit Report</button>
+  </form>

@@ -1,10 +1,10 @@
 <div class="page">
     <h1>Tell Us Who You Are</h1>
-      <form class="register-form" #registerForm="ngForm">
+      <form class="register-form" [formGroup]="registerForm">
         <fieldset>
-          <input type="text" placeholder="Enter your name" required/>
-          <input type="number" placeholder="Enter your age" required/>
-          <select>
+          <input type="text" placeholder="Enter your name" required formControlName="name" />
+          <input type="number" placeholder="Enter your age" required formControlName="age" />
+          <select formControlName="job_id">
             <option value="1">Select an occupation</option>
           </select>
         </fieldset>

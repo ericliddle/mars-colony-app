@@ -1,17 +1,16 @@
-  <!--<div>
-    <h1>Recent Encounters</h1>
-    <span>Safety on Mars is Your Responsibility</span>
-  <div>
-    <select>
-          <option>Select Occupation</option>
-          <option *ngFor="let alien of this.aliens">{{alien.type}}</option>
+<div class= "report-head">
+  <h1>Recent Encounters
+  <p>Safety on Mars is Our Responsibility</p></h1>
+</div>
+<div class="report-log">
+    <form class="report-form" [formGroup]="reportForm" (ngSubmit)="reported($event)">
+      <fieldset>
+    <select class="alien-list" name="Select alient type" formControlName="atype">
+      <option>Select Occupation</option>
+      <option *ngFor="let alien of this.aliens">{{alien.type}}</option>
     </select>
-  </div>    
-  <div>
-    <textarea placeholder="Action taken" ng-model="encounter.action" name="Action_taken" id="" rows="10" required="" class="ng-pristine ng-empty ng-invalid ng-invalid-required ng-touched"></textarea>
-  </div>
-  </div>
-
-  <form>
-    <button routerLink="/encounters" (click)="extractData()" type="report">Submit Report</button>
-  </form>-->
+    <textarea class="action-log" rows="" cols="" placeholder="What Did You See?" formControlName="action"></textarea>
+        <button class="report-submit" type="submit">Submit Report</button>
+      </fieldset>
+    </form>
+</div>

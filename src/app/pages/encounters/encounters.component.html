@@ -1,14 +1,14 @@
 
 <div class= "encounters-head">
    <h1>Report Encounter</h1>
-    <p>See an Alien? Report it!</p>
+    <p>Report Any Suspicious Activity</p>
 </div>
   <div class= "page-container overlay">
 
     <div class="encounters-list">
       <ul>
       <li class="data-list" *ngFor="let item of encounters">
-        {{ item.date }} 
+        {{ item.date }}
         {{ item.atype }}
         {{ item.action }}
         </li>
@@ -16,12 +16,12 @@
     </div>
 
     <div>
-      <p *ngIf="encounters.length === 10">This list is too long! {{ listOfMessages.length }}</p>
+      <p *ngIf="encounters.length === 10">{{ listOfMessages.length }}</p>
     </div>
   </div>
   <div class= "footer-box">
     <footer>
       <img src="/assets/images/mars-robot.png" alt="Mars Robot" height="100" width="100">
-      <button class= "encounter-button" type="report" routerlink="//report" ng-href="/report"><a href="/reprt">Report Encounter</a></button>
+      <button class="encounter-button" type="report" routerlink="//report" ng-href="/report"><a href="/report">Report Encounter</a></button>
     </footer>
   </div>

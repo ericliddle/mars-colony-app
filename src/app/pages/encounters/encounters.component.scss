@@ -1,11 +1,13 @@
 .encounters-head { 
     color: white;
-    // height: 30%;
+    height: 25%;
+    align-self: center;
     text-align: center;
     font-family: Helvetica, Arial, sans-serif;
+    font-weight: 100;
 
     h1 {
-        padding: 15px 0; 
+        padding: 45px 0 15px 0; 
         font-size: 3rem;
     }
     p {
@@ -15,7 +17,7 @@
 }
 
 .page-container {
-    height:61%;
+    height:50%;
 }
 
 .ul {

@@ -2,6 +2,7 @@
 /* You can add global styles to this file, and also import other style files */
 
 .pulsate {
+    color: #FFF;
     -webkit-animation: pulsate 1.75s ease-out;
     -webkit-animation-iteration-count: infinite; 
     opacity: 0.5;
@@ -29,7 +30,6 @@
     flex-direction: column;
     justify-content: space-between;
     justify-content: center;
-    color: white;
     font-family: Helvetica, sans-serif;
     font-weight: lighter;
 }

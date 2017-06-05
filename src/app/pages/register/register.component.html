@@ -1,29 +1,17 @@
 <div class="page">
-    <div class= "collect-info">
+    <div class="report-head">
       <h1>Tell Us Who You Are</h1>
+    </div>  
           <form class="register-form" [formGroup]="registerForm" (ngSubmit)="register($event)">
           <fieldset>
-            <input type="text" placeholder="Enter your name" required formControlName="name" />
-            <input type="number" placeholder="Enter your age" required formControlName="age" />
-            <select formControlName="job_id">
+            <input class="name-box" type="text" placeholder="Enter your name" required formControlName="name" />
+            <input class="age-box" type="number" placeholder="Enter your age" required formControlName="age" />
+            <select class="job-select" formControlName="job_id">
               <option [value]="NO_JOB_SELECTED">Select an Occupation</option>
               <option *ngFor="let job of this.jobs" [value]="job.id">{{job.name}}</option>
             </select>
           </fieldset>
-      <button type="submit" [disabled]="registerForm.invalid">Register</button>
+      <button class="register-button" type="submit" [disabled]="registerForm.invalid">>Register<</button>
         </form>
-    <!--<form>
-    <fieldset>
-      <input name="name" type="text" placeholder="Enter Your Name" required/>
-      <input type="text" placeholder="Enter Your Earth Age" />
-    <select>
-        <option>Select Occupation</option>
-        <option *ngFor="let job of this.jobs">{{job.name}}</option>
-    </select>
-      <label>Action</label>
-    </fieldset>
-    <button routerLink="/encounters" (click)="postColonist()" type="submit"> Register</button>
-  </form>-->
   <h1> Check in </h1>
     </div> 
-</div>

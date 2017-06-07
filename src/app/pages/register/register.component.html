@@ -1,17 +1,19 @@
 <div class="page">
     <div class="report-head">
       <h1>Tell Us Who You Are</h1>
-    </div>  
+    </div>
+          <div class="form-container">
           <form class="register-form" [formGroup]="registerForm" (ngSubmit)="register($event)">
-          <fieldset>
-            <input class="name-box" type="text" placeholder="Enter your name" required formControlName="name" />
-            <input class="age-box" type="number" placeholder="Enter your age" required formControlName="age" />
-            <select class="job-select" formControlName="job_id">
-              <option [value]="NO_JOB_SELECTED">Select an Occupation</option>
-              <option *ngFor="let job of this.jobs" [value]="job.id">{{job.name}}</option>
-            </select>
-          </fieldset>
-      <button class="register-button" type="submit" [disabled]="registerForm.invalid">>Register<</button>
-        </form>
+            <fieldset>
+              <input class="name-box" type="text" placeholder="Enter your name" required formControlName="name" />
+              <input class="age-box" type="number" placeholder="Enter your age" required formControlName="age" />
+              <select class="job-select" formControlName="job_id">
+                <option [value]="NO_JOB_SELECTED">Select an Occupation</option>
+                <option *ngFor="let job of this.jobs" [value]="job.id">{{job.name}}</option>
+              </select>
+            </fieldset>
+          <button class="register-button" type="submit" [disabled]="registerForm.invalid">>Register<</button>
+          </form>
+        </div>
   <h1> Check in </h1>
     </div> 
